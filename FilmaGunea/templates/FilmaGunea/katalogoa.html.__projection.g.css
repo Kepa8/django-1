@@ -1,0 +1,92 @@
+/* BEGIN EXTERNAL SOURCE */
+
+    /* Estilos para la tabla */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .table th, .table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    .table th {
+        background-color: #f2f2f2;
+    }
+    .table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .table tbody tr:hover {
+        background-color: #ddd;
+    }
+
+/* END EXTERNAL SOURCE */
+a */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+
+    /* Estilos para la paginación */
+    .pagination {
+        margin-top: 20px;
+    }
+    .pagination a {
+        color: #007bff;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+    .pagination a:hover:not(.current) {
+        background-color: #ddd;
+    }
+    .pagination .current {
+        background-color: #007bff;
+        color: white;
+    }
+
+/* END EXTERNAL SOURCE */
+a */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+
+    /* Estilos para la paginación */
+    .pagination {
+        margin-top: 20px;
+    }
+    .pagination a {
+        color: #007bff;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+    .pagination a:hover:not(.current) {
+        background-color: #ddd;
+    }
+    .pagination .current {
+        background-color: #007bff;
+        color: white;
+    }
+
+/* END EXTERNAL SOURCE */

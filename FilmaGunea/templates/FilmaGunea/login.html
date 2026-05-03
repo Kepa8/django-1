@@ -1,0 +1,26 @@
+
+{% extends 'FilmaGunea/Oinarria.html' %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block sidebar %}
+<ul>
+    <li><a href="{% url 'register' %}">Register</a></li>
+    <li><a href="{% url 'hasiera' %}">Hasiera</a></li>
+</ul>
+{% endblock %}
+
+
+{% block edukia %}
+<div id="edukia">
+    <h2>Login</h2>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sartu</button>
+</form>
+
+</div>
+{% endblock %}

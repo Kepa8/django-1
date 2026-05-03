@@ -1,0 +1,17 @@
+/* BEGIN EXTERNAL SOURCE */
+
+        title {
+            font-weight: bold;
+            color: blue;
+        }
+
+        #sidebar {
+            float: left;
+            width: 200px;
+        }
+
+        #edukia {
+            margin-left: 220px;
+        }
+    
+/* END EXTERNAL SOURCE */

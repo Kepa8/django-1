@@ -1,0 +1,47 @@
+{% extends 'FilmaGunea/Oinarria.html' %}
+
+{% block title %}
+    Zaleak
+{% endblock %}
+
+{% block sidebar %}
+<ul>
+    <li><a href="{% url 'hasiera' %}">Hasiera</a></li>
+    <li><a href="{% url 'katalogoa' %}">Katalogoa Ikusi</a></li>
+    <li><a href="{% url 'bozkatu' %}">Bozkatu</a></li>
+    <li><a href="{% url 'logout' %}">ATERA SAIOTIK</a></li>
+</ul>
+{% endblock %}
+
+
+{% block edukia %}
+<div id="zaleak">
+    <h2>Zaleak</h2>
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <label for="pelicula">Aukeratu Pelikula:</label>
+        <select name="filma_id" id="filma_id">
+            {% for filma in filmak %}
+            <option value="{{ filma.id }}">{{ filma.izenburua }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Erakutsi zaleak</button>
+    </form>
+
+    {% if bozkatzailea %}
+    <h3>Bozkatzaileak:</h3>
+    <ul>
+        {% for bozkatzailea in bozkatzailea %}
+        <li>{{ bozkatzailea.erabiltzailea.username }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endblock %}

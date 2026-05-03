@@ -1,0 +1,23 @@
+{% extends 'FilmaGunea/Oinarria.html' %}
+
+{% block title %}
+    sartuta
+{% endblock %}
+
+{% block sidebar %}
+<ul>
+    <li><a href="{% url 'katalogoa' %}">Katalogoa</a></li>
+    <li><a href="{% url 'bozkatu' %}">Bozkatu</a></li>
+    <li><a href="{% url 'zaleak' %}">Zaleak</a></li>
+    <li><a href="{% url 'logout' %}">ATERA SAIOTIK</a></li>
+</ul>
+{% endblock %}
+
+
+{% block edukia %}
+<div id="edukia">
+    <h2>Ongi etorri, {{ user }}</h2>
+
+
+</div>
+{% endblock %}

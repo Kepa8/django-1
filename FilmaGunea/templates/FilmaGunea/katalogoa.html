@@ -1,0 +1,80 @@
+{% extends 'FilmaGunea/Oinarria.html' %}
+
+{% block title %}
+    Katalogoa
+{% endblock %}
+
+{% block sidebar %}
+<ul>
+    <li><a href="{% url 'hasiera' %}">Hasiera</a></li>
+    <li><a href="{% url 'bozkatu' %}">Bozkatu</a></li>
+    <li><a href="{% url 'zaleak' %}">Zaleak</a></li>
+    <li><a href="{% url 'logout' %}">ATERA SAIOTIK</a></li>
+</ul>
+{% endblock %}
+
+{% block edukia %}
+<style>
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    .table th, .table td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    .table th {
+        background-color: #f2f2f2;
+    }
+    .table tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    .table tbody tr:hover {
+        background-color: #ddd;
+    }
+</style>
+
+<div id="katalogoa">
+    <h2>Katalogoa</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Izenburua</th>
+                <th>Zuzendaria</th>
+                <th>Urtea</th>
+                <th>Generoa</th>
+                <th>Sinopsia</th>
+                <th>Bozkak</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for filma in filmak %}
+            <tr>
+                <td>{{ filma.izenburua }}</td>
+                <td>{{ filma.zuzendaria }}</td>
+                <td>{{ filma.urtea }}</td>
+                <td>{{ filma.generoa }}</td>
+                <td>{{ filma.sipnosia }}</td>
+                <td>{{ filma.bozkak }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="pagination">
+        <span class="step-links">
+            {% if filmak.has_previous %}
+                <a href="?page={{ filmak.previous_page_number }}">Aurrekoa</a>
+            {% endif %}
+            <span class="current">
+                Orrialdea {{ filmak.number }} - {{ filmak.paginator.num_pages }}-tik.
+            </span>
+            {% if filmak.has_next %}
+                <a href="?page={{ filmak.next_page_number }}">Hurrengoa</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endblock %}
